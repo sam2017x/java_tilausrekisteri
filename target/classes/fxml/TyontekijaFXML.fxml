@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox minWidth="680.0" prefHeight="633.0" prefWidth="978.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="r11.orderify.controller.TyontekijaController">
+   <children>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" minWidth="680.0" prefHeight="548.0" prefWidth="854.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TabPane minWidth="680.0" prefHeight="601.0" prefWidth="433.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <tabs>
+                  <Tab fx:id="ttTabOrders" text="Orders">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="680.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <SplitPane dividerPositions="0.35040983606557374" layoutX="224.0" layoutY="181.0" prefHeight="574.0" prefWidth="978.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <items>
+                                    <AnchorPane maxWidth="339.0" minHeight="-Infinity" minWidth="339.0" prefHeight="160.0" prefWidth="339.0">
+                                       <children>
+                                          <TableView fx:id="tilausTW" layoutX="-20.0" layoutY="69.0" prefHeight="572.0" prefWidth="339.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <columns>
+                                                <TableColumn fx:id="orderIdColumn" prefWidth="35.600035190582275" text="ID" />
+                                                <TableColumn fx:id="customerColumn" prefWidth="128.00003814697266" text="Customer" />
+                                                <TableColumn fx:id="statusColumn" prefWidth="89.59996032714844" text="Status" />
+                                                <TableColumn fx:id="priorityColumn" prefWidth="84.39999694824218" text="Priority" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="602.0" prefWidth="359.0">
+                                       <children>
+                                          <AnchorPane layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="296.0" prefWidth="612.0">
+                                             <children>
+                                                <VBox layoutX="9.0" layoutY="14.0" prefHeight="267.0" prefWidth="253.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="14.0">
+                                                   <children>
+                                                      <TableView fx:id="itemTW" prefHeight="267.0" prefWidth="223.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="itemIdColumn" prefWidth="69.5999755859375" text="ID" />
+                                                            <TableColumn fx:id="itemModelColumn" prefWidth="182.39996337890625" text="Model" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </VBox>
+                                                <VBox layoutX="287.0" layoutY="16.0" prefHeight="267.0" prefWidth="323.0" spacing="6.0">
+                                                   <children>
+                                                      <Label fx:id="lblTtItemComm" text="Item comment:" />
+                                                      <Label fx:id="itemCommentFieldLabel" alignment="TOP_LEFT" prefHeight="245.0" prefWidth="324.0" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="10.0" layoutY="306.0" prefHeight="290.0" prefWidth="612.0">
+                                             <children>
+                                                <Label fx:id="customerNameLabel" layoutX="12.0" layoutY="5.0" text="Customer name" />
+                                                <Label fx:id="lblTtOrderComm" layoutX="12.0" layoutY="28.0" text="Order comment:" />
+                                                <Label fx:id="orderCommentFieldLabel" alignment="TOP_LEFT" layoutX="14.0" layoutY="46.0" prefHeight="197.0" prefWidth="589.0" />
+                                                <Button fx:id="btnTtAccOrder" layoutX="525.0" layoutY="256.0" mnemonicParsing="false" onAction="#acceptOrder" text="Accept Order" />
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="ttTabMyWork" text="My work">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <SplitPane dividerPositions="0.35040983606557374" layoutX="314.0" layoutY="199.0" prefHeight="574.0" prefWidth="978.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <items>
+                                    <AnchorPane maxWidth="339.0" minHeight="0.0" minWidth="339.0" prefHeight="160.0" prefWidth="339.0">
+                                       <children>
+                                          <TableView fx:id="mwTilausTW" prefHeight="572.0" prefWidth="339.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <columns>
+                                                <TableColumn fx:id="mwOrderIdColumn" prefWidth="38.8000168800354" text="ID" />
+                                                <TableColumn fx:id="mwCustomerColumn" prefWidth="92.00000762939453" text="Customer" />
+                                                <TableColumn fx:id="mwStatusColumn" prefWidth="78.79998779296875" text="Status" />
+                                                <TableColumn fx:id="mwPriorityColumn" prefWidth="69.60000610351562" text="Priority" />
+                                                <TableColumn fx:id="mwTimeColumn" prefWidth="57.60002441406249" text="Time" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="602.0" prefWidth="359.0">
+                                       <children>
+                                          <AnchorPane prefHeight="284.0" prefWidth="632.0">
+                                             <children>
+                                                <VBox layoutX="8.0" prefHeight="268.0" prefWidth="277.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="347.0" AnchorPane.topAnchor="15.0">
+                                                   <children>
+                                                      <TableView fx:id="mwItemTW" prefHeight="266.0" prefWidth="277.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="mwItemIdColumn" prefWidth="71.20001220703125" text="ID" />
+                                                            <TableColumn fx:id="mwItemModelColumn" prefWidth="204.7999267578125" text="Model" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </VBox>
+                                                <VBox layoutX="294.0" layoutY="14.0" prefHeight="267.0" prefWidth="323.0" spacing="6.0">
+                                                   <children>
+                                                      <Label fx:id="lblMwItemComm" text="Item comment" />
+                                                      <TextArea fx:id="mwItemCommentField" prefHeight="268.0" prefWidth="323.0" promptText="Item comment" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="293.0" prefHeight="310.0" prefWidth="631.0">
+                                             <children>
+                                                <Label fx:id="mwCustomerNameLabel" layoutX="14.0" layoutY="5.0" text="Customer name" />
+                                                <Label fx:id="lblMwOrderComm" layoutX="14.0" layoutY="29.0" text="Order comment" />
+                                                <TextArea fx:id="mwOrderCommentField" layoutX="14.0" layoutY="55.0" prefHeight="202.0" prefWidth="604.0" promptText="Order comment" />
+                                                <HBox layoutX="540.0" layoutY="270.0" prefHeight="26.0" prefWidth="603.0" spacing="10.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="14.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER_LEFT" prefHeight="160.0" prefWidth="107.0">
+                                                         <children>
+                                                            <Button fx:id="btnMwUpdateOrder" mnemonicParsing="false" onAction="#updateOrder" text="Update order" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="486.0">
+                                                         <children>
+                                                            <Button fx:id="btnMwOrderDone" mnemonicParsing="false" onAction="#doneOrder" text="Order done" />
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
